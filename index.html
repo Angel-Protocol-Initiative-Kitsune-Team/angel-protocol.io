@@ -1,12 +1,615 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Angel Protocol</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ANGEL PROTOCOL INITIATIVE</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#f3f5f8;
+font-family:Rajdhani,sans-serif;
+overflow-x:hidden;
+color:#222;
+
+}
+
+/*--------------------------------*/
+
+.background{
+
+position:fixed;
+inset:0;
+overflow:hidden;
+z-index:-10;
+
+}
+
+/* Large Blue Beam */
+
+.beam{
+
+position:absolute;
+
+left:-300px;
+top:250px;
+
+width:900px;
+height:18px;
+
+background:#0a88ff;
+
+transform:rotate(-12deg);
+
+box-shadow:
+
+0 0 40px #2196f3,
+0 0 80px #2196f3;
+
+}
+
+.beam:nth-child(2){
+
+top:280px;
+height:10px;
+width:980px;
+opacity:.6;
+
+}
+
+.beam:nth-child(3){
+
+top:315px;
+height:30px;
+width:1000px;
+opacity:.8;
+
+}
+
+/* Central Burst */
+
+.core{
+
+position:absolute;
+
+right:280px;
+top:120px;
+
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+border:8px solid #0a88ff;
+
+box-shadow:
+
+0 0 40px #2196f3;
+
+}
+
+.core:before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+width:30px;
+height:30px;
+
+background:#0a88ff;
+
+transform:translate(-50%,-50%) rotate(45deg);
+
+}
+
+.spike{
+
+position:absolute;
+
+right:390px;
+top:250px;
+
+width:240px;
+height:6px;
+
+background:#0a88ff;
+
+transform-origin:left center;
+
+}
+
+.spike:nth-child(5){transform:rotate(30deg);}
+.spike:nth-child(6){transform:rotate(70deg);}
+.spike:nth-child(7){transform:rotate(-25deg);}
+.spike:nth-child(8){transform:rotate(-70deg);}
+.spike:nth-child(9){transform:rotate(120deg);}
+.spike:nth-child(10){transform:rotate(160deg);}
+
+.grid{
+
+position:absolute;
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,0,0,.04) 1px, transparent 1px);
+
+background-size:60px 60px;
+
+opacity:.4;
+
+}
+
+/*--------------------------------*/
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:25px 70px;
+
+}
+
+.logo{
+
+font-family:Orbitron;
+font-size:32px;
+font-weight:800;
+letter-spacing:3px;
+
+color:#0a88ff;
+
+}
+
+nav{
+
+display:flex;
+gap:18px;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:#444;
+font-weight:bold;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#0a88ff;
+
+}
+
+/*--------------------------------*/
+
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+align-items:center;
+
+padding:90px 80px;
+
+min-height:80vh;
+
+}
+
+.heroText{
+
+max-width:700px;
+
+}
+
+.hero h1{
+
+font-family:Orbitron;
+font-size:68px;
+line-height:1.0;
+letter-spacing:3px;
+
+}
+
+.hero h2{
+
+margin-top:15px;
+font-size:24px;
+color:#0a88ff;
+letter-spacing:6px;
+
+}
+
+.hero p{
+
+margin-top:30px;
+font-size:22px;
+line-height:1.5;
+max-width:600px;
+
+}
+
+.buttons{
+
+margin-top:40px;
+display:flex;
+gap:20px;
+
+}
+
+button{
+
+padding:15px 34px;
+
+font-family:Orbitron;
+
+border:none;
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.primary{
+
+background:#0a88ff;
+color:white;
+
+}
+
+.secondary{
+
+background:white;
+border:2px solid #0a88ff;
+color:#0a88ff;
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+box-shadow:0 0 20px #0a88ff55;
+
+}
+
+/*--------------------------------*/
+
+.panel{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+padding:70px;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+border-left:6px solid #0a88ff;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3{
+
+font-family:Orbitron;
+margin-bottom:15px;
+
+}
+
+/*--------------------------------*/
+
+.stats{
+
+display:flex;
+justify-content:space-evenly;
+
+padding:60px;
+
+background:#ffffffaa;
+backdrop-filter:blur(12px);
+
+}
+
+.stat{
+
+text-align:center;
+
+}
+
+.stat h1{
+
+font-family:Orbitron;
+font-size:54px;
+color:#0a88ff;
+
+}
+
+footer{
+
+margin-top:60px;
+
+padding:40px;
+
+text-align:center;
+
+background:#111;
+color:#ddd;
+
+font-size:18px;
+
+}
+
+/*--------------------------------*/
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+
+padding:50px;
+
+}
+
+.hero h1{
+
+font-size:44px;
+
+}
+
+.panel{
+
+grid-template-columns:1fr;
+
+}
+
+.stats{
+
+flex-direction:column;
+gap:30px;
+
+}
+
+header{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
-    <h1>Welcome.</h1>
-    <p>There is nothing here, yet.</p>
+
+<div class="background">
+
+<div class="grid"></div>
+
+<div class="beam"></div>
+<div class="beam"></div>
+<div class="beam"></div>
+
+<div class="core"></div>
+
+<div class="spike"></div>
+<div class="spike"></div>
+<div class="spike"></div>
+<div class="spike"></div>
+<div class="spike"></div>
+<div class="spike"></div>
+
+</div>
+
+<header>
+
+<div class="logo">
+
+ANGEL PROTOCOL
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="protocols.html">Protocols</a>
+
+<a href="personnel.html">Personnel</a>
+
+<a href="systems.html">Systems</a>
+
+<a href="archives.html">Archives</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="heroText">
+
+<h1>
+
+ANGEL<br>
+PROTOCOL<br>
+INITIATIVE
+
+</h1>
+
+<h2>
+
+AMETHYST CORPORATIONS
+
+</h2>
+
+<p>
+
+The Angel Protocol Initiative is an advanced strategic intelligence
+platform developed by Amethyst Corporations. Combining AI-assisted
+decision systems, tactical surveillance, autonomous defense networks,
+and predictive analytics, the Initiative serves as the backbone of
+next-generation security operations.
+
+</p>
+
+<div class="buttons">
+
+<button class="primary"
+onclick="location.href='protocols.html'">
+
+ACCESS DATABASE
+
+</button>
+
+<button class="secondary"
+onclick="location.href='about.html'">
+
+PROJECT OVERVIEW
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+
+<h1>99.97%</h1>
+
+System Integrity
+
+</div>
+
+<div class="stat">
+
+<h1>42</h1>
+
+Operational Sectors
+
+</div>
+
+<div class="stat">
+
+<h1>24/7</h1>
+
+AI Monitoring
+
+</div>
+
+</section>
+
+<section class="panel">
+
+<div class="card">
+
+<h3>
+
+TACTICAL AI
+
+</h3>
+
+<p>
+
+Adaptive battlefield prediction using neural combat simulations and
+threat modeling.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+SURVEILLANCE GRID
+
+</h3>
+
+<p>
+
+Global satellite integration capable of monitoring strategic zones in
+real time.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+PROJECT ASTRALITH
+
+</h3>
+
+<p>
+
+Experimental quantum intelligence core responsible for advanced
+autonomous decision making.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2048 AMETHYST CORPORATIONS
+
+<br>
+
+ANGEL PROTOCOL INITIATIVE
+
+</footer>
+
 </body>
 </html>
 
