@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Archives • Angel Protocol Initiative</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Rajdhani,sans-serif;
+background:#f4f5f7;
+color:#222;
+
+}
+
+/*============================*/
+
+.background{
+
+position:fixed;
+inset:0;
+z-index:-5;
+background:#f4f5f7;
+
+}
+
+.background::before{
+
+content:"";
+position:absolute;
+inset:0;
+
+background-image:
+linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px);
+
+background-size:60px 60px;
+
+}
+
+.diamond{
+
+position:absolute;
+
+top:50%;
+left:75%;
+
+width:420px;
+height:420px;
+
+transform:translate(-50%,-50%) rotate(45deg);
+
+border:6px solid #0A88FF;
+
+}
+
+.diamond::before{
+
+content:"";
+
+position:absolute;
+inset:65px;
+
+border:2px solid rgba(10,136,255,.45);
+
+}
+
+.diamond::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+width:18px;
+height:18px;
+
+background:#0A88FF;
+
+transform:translate(-50%,-50%);
+
+}
+
+/*============================*/
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:25px 70px;
+
+}
+
+.logo{
+
+font-family:Orbitron;
+font-size:30px;
+font-weight:800;
+letter-spacing:2px;
+
+color:#0A88FF;
+
+}
+
+nav{
+
+display:flex;
+gap:20px;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:#444;
+font-weight:bold;
+
+}
+
+nav a:hover{
+
+color:#0A88FF;
+
+}
+
+/*============================*/
+
+.hero{
+
+padding:60px 70px 30px;
+
+}
+
+.hero h1{
+
+font-family:Orbitron;
+font-size:54px;
+
+letter-spacing:4px;
+
+}
+
+.subtitle{
+
+margin-top:10px;
+letter-spacing:4px;
+color:#0A88FF;
+
+}
+
+/*============================*/
+
+.database{
+
+padding:20px 70px 80px;
+
+}
+
+.table{
+
+background:white;
+
+box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+overflow:hidden;
+
+}
+
+.row{
+
+display:grid;
+
+grid-template-columns:
+
+180px
+220px
+140px
+160px
+1fr;
+
+padding:18px 25px;
+
+align-items:center;
+
+border-bottom:1px solid #e6e6e6;
+
+}
+
+.header{
+
+background:#0A88FF;
+
+color:white;
+
+font-family:Orbitron;
+
+}
+
+.row:hover{
+
+background:#f8fbff;
+
+}
+
+/*============================*/
+
+.badge{
+
+display:inline-block;
+
+padding:4px 12px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+font-size:14px;
+
+}
+
+.public{
+
+background:#d8f5dc;
+color:#2d7b39;
+
+}
+
+.restricted{
+
+background:#ffe7b5;
+color:#996500;
+
+}
+
+.classified{
+
+background:#ffd2d2;
+color:#b40000;
+
+}
+
+/*============================*/
+
+button{
+
+padding:8px 18px;
+
+font-family:Orbitron;
+
+border:none;
+
+background:#0A88FF;
+
+color:white;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 0 10px rgba(10,136,255,.35);
+
+}
+
+button:disabled{
+
+background:#999;
+
+cursor:not-allowed;
+
+box-shadow:none;
+
+}
+
+/*============================*/
+
+footer{
+
+margin-top:50px;
+
+padding:30px;
+
+background:#111;
+
+color:#ddd;
+
+text-align:center;
+
+}
+
+@media(max-width:1000px){
+
+.row{
+
+grid-template-columns:1fr;
+gap:10px;
+
+}
+
+.header{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="background">
+
+<div class="diamond"></div>
+
+</div>
+
+<header>
+
+<div class="logo">
+
+ANGEL PROTOCOL
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="personnel.html">Personnel</a>
+<a href="systems.html">Systems</a>
+<a href="archives.html">Archives</a>
+
+</nav>
+
+</header>
+
+<div class="hero">
+
+<h1>ARCHIVES</h1>
+
+<div class="subtitle">
+
+CORPORATE RECORD DATABASE
+
+</div>
+
+</div>
+
+<section class="database">
+
+<div class="table">
+
+<div class="row header">
+
+<div>FILE ID</div>
+<div>DOCUMENT</div>
+<div>LEVEL</div>
+<div>DATE</div>
+<div>ACTION</div>
+
+</div>
+
+<div class="row">
+
+<div>API-0001</div>
+
+<div>Angel Protocol Overview</div>
+
+<div><span class="badge public">PUBLIC</span></div>
+
+<div>2048-01-08</div>
+
+<div>
+
+<button onclick="location.href='docs/API-0001.html'">
+
+OPEN
+
+</button>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div>API-0002</div>
+
+<div>System Initialization Log</div>
+
+<div><span class="badge restricted">RESTRICTED</span></div>
+
+<div>2048-02-12</div>
+
+<div>
+
+<button onclick="location.href='docs/API-0002.html'">
+
+OPEN
+
+</button>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div>API-0014</div>
+
+<div>Sector-04 Incident Report</div>
+
+<div><span class="badge classified">CLASSIFIED</span></div>
+
+<div>2048-05-21</div>
+
+<div>
+
+<button disabled>
+
+ACCESS DENIED
+
+</button>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div>API-0021</div>
+
+<div>Unknown Transmission</div>
+
+<div><span class="badge classified">CLASSIFIED</span></div>
+
+<div>████-██-██</div>
+
+<div>
+
+<button disabled>
+
+LOCKED
+
+</button>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div>API-0037</div>
+
+<div>Personnel Evaluation Logs</div>
+
+<div><span class="badge restricted">RESTRICTED</span></div>
+
+<div>2048-07-15</div>
+
+<div>
+
+<button onclick="location.href='docs/API-0037.html'">
+
+OPEN
+
+</button>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div>API-0042</div>
+
+<div>Experimental AI Behavioral Analysis</div>
+
+<div><span class="badge classified">CLASSIFIED</span></div>
+
+<div>████-██-██</div>
+
+<div>
+
+<button disabled>
+
+CLEARANCE REQUIRED
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2048 Amethyst Corporations
+
+<br><br>
+
+ANGEL PROTOCOL INITIATIVE
+
+</footer>
+
+</body>
+
+</html>
