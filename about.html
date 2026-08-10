@@ -1,2 +1,434 @@
 <!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About • Angel Protocol Initiative</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Rajdhani,sans-serif;
+background:#f4f5f7;
+color:#222;
+overflow-x:hidden;
+
+}
+
+/* ==========================
+BACKGROUND
+========================== */
+
+.background{
+
+position:fixed;
+inset:0;
+z-index:-10;
+
+background:#f4f5f7;
+
+}
+
+.background::before{
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(0,0,0,.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,0,0,.05) 1px, transparent 1px);
+
+background-size:60px 60px;
+
+}
+
+.diamond{
+
+position:absolute;
+
+top:50%;
+left:75%;
+
+width:420px;
+height:420px;
+
+transform:translate(-50%,-50%) rotate(45deg);
+
+border:6px solid #0A88FF;
+
+}
+
+.diamond::before{
+
+content:"";
+
+position:absolute;
+
+inset:60px;
+
+border:2px solid rgba(10,136,255,.5);
+
+}
+
+.diamond::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+width:20px;
+height:20px;
+
+background:#0A88FF;
+
+transform:translate(-50%,-50%);
+
+}
+
+/* ========================== */
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:25px 70px;
+
+}
+
+.logo{
+
+font-family:Orbitron;
+font-size:30px;
+font-weight:800;
+
+color:#0A88FF;
+
+letter-spacing:2px;
+
+}
+
+nav{
+
+display:flex;
+gap:20px;
+
+}
+
+nav a{
+
+text-decoration:none;
+font-weight:bold;
+color:#444;
+
+transition:.25s;
+
+}
+
+nav a:hover{
+
+color:#0A88FF;
+
+}
+
+/* ========================== */
+
+.hero{
+
+padding:60px 70px 30px;
+
+}
+
+.hero h1{
+
+font-family:Orbitron;
+
+font-size:56px;
+
+letter-spacing:3px;
+
+}
+
+.subtitle{
+
+margin-top:10px;
+
+color:#0A88FF;
+
+letter-spacing:5px;
+
+font-size:18px;
+
+}
+
+/* ========================== */
+
+section{
+
+padding:30px 70px;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+margin-bottom:30px;
+
+border-left:6px solid #0A88FF;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+font-family:Orbitron;
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+.card p{
+
+font-size:20px;
+line-height:1.7;
+
+}
+
+/* ========================== */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+padding:30px 70px;
+
+}
+
+.stat{
+
+background:white;
+
+padding:30px;
+
+text-align:center;
+
+border-top:5px solid #0A88FF;
+
+box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+}
+
+.stat h1{
+
+font-family:Orbitron;
+
+font-size:38px;
+
+color:#0A88FF;
+
+}
+
+.stat span{
+
+display:block;
+margin-top:10px;
+
+font-weight:bold;
+
+}
+
+/* ========================== */
+
+footer{
+
+margin-top:40px;
+
+padding:30px;
+
+background:#111;
+
+color:#ddd;
+
+text-align:center;
+
+}
+
+@media(max-width:900px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+header{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="background">
+<div class="diamond"></div>
+</div>
+
+<header>
+
+<div class="logo">
+ANGEL PROTOCOL
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="personnel.html">Personnel</a>
+<a href="systems.html">Systems</a>
+<a href="archives.html">Archives</a>
+
+</nav>
+
+</header>
+
+<div class="hero">
+
+<h1>ABOUT</h1>
+
+<div class="subtitle">
+
+AMETHYST CORPORATIONS
+
+</div>
+
+</div>
+
+<section>
+
+<div class="card">
+
+<h2>Overview</h2>
+
+<p>
+
+The Angel Protocol Initiative is a research and strategic development
+division established by <strong>Amethyst Corporations</strong>. Its
+primary objective is the creation and maintenance of the
+<strong>Angel Protocol</strong>, an advanced artificial intelligence
+framework intended to provide command support, strategic analysis,
+autonomous monitoring, and operational decision assistance.
+
+The Initiative serves as the corporation's highest-security program,
+integrating specialists in artificial intelligence, cybersecurity,
+robotics, and systems engineering.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Mission Statement</h2>
+
+<p>
+
+To develop an adaptive intelligence capable of protecting critical
+infrastructure, coordinating strategic assets, and assisting human
+operators through accurate, ethical, and efficient decision support.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Core Principles</h2>
+
+<p>
+
+• Operational Integrity<br>
+• Human Oversight<br>
+• Autonomous Assistance<br>
+• Information Security<br>
+• Continuous Learning
+
+</p>
+
+</div>
+
+</section>
+
+<div class="stats">
+
+<div class="stat">
+<h1>01</h1>
+<span>Active Project</span>
+</div>
+
+<div class="stat">
+<h1>04</h1>
+<span>Operational Sectors</span>
+</div>
+
+<div class="stat">
+<h1>Tier-X</h1>
+<span>Security Clearance</span>
+</div>
+
+<div class="stat">
+<h1>24/7</h1>
+<span>System Monitoring</span>
+</div>
+
+</div>
+
+<footer>
+
+© 2048 Amethyst Corporations
+
+<br><br>
+
+ANGEL PROTOCOL INITIATIVE
+
+</footer>
+
+</body>
+
+</html>
