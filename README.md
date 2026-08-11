@@ -1,1 +1,1 @@
-# angel-protocol-kitsune.io
+# angel-protocol.io
