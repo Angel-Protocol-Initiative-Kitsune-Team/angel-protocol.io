@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 • Angel Protocol</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#f5f6f8;
+font-family:Rajdhani,sans-serif;
+color:#222;
+
+overflow:hidden;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+height:100vh;
+
+}
+
+/*==============================*/
+
+.background{
+
+position:fixed;
+inset:0;
+z-index:-5;
+
+background:#f5f6f8;
+
+}
+
+.background::before{
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px);
+
+background-size:60px 60px;
+
+}
+
+.diamond{
+
+position:absolute;
+
+left:70%;
+top:50%;
+
+width:420px;
+height:420px;
+
+transform:translate(-50%,-50%) rotate(45deg);
+
+border:6px solid rgba(10,136,255,.18);
+
+}
+
+.diamond::before{
+
+content:"";
+
+position:absolute;
+inset:60px;
+
+border:2px solid rgba(10,136,255,.15);
+
+}
+
+/*==============================*/
+
+.container{
+
+width:min(850px,90%);
+
+background:white;
+
+padding:50px;
+
+border-left:8px solid #0A88FF;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.code{
+
+font-family:Orbitron;
+
+font-size:120px;
+
+color:#0A88FF;
+
+letter-spacing:6px;
+
+}
+
+.status{
+
+font-family:Orbitron;
+
+font-size:28px;
+
+margin-top:10px;
+
+}
+
+.message{
+
+margin-top:25px;
+
+font-size:22px;
+
+line-height:1.7;
+
+}
+
+.details{
+
+margin-top:40px;
+
+padding:20px;
+
+background:#f7f9fc;
+
+border-left:4px solid #0A88FF;
+
+font-family:monospace;
+
+font-size:15px;
+
+line-height:1.8;
+
+white-space:pre-line;
+
+}
+
+.button{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:14px 34px;
+
+background:#0A88FF;
+
+color:white;
+
+text-decoration:none;
+
+font-family:Orbitron;
+
+transition:.25s;
+
+}
+
+.button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 15px rgba(10,136,255,.35);
+
+}
+
+.corner{
+
+position:fixed;
+
+bottom:20px;
+right:30px;
+
+opacity:.25;
+
+font-family:Orbitron;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="background">
+
+<div class="diamond"></div>
+
+</div>
+
+<div class="container">
+
+<div class="code">
+
+404
+
+</div>
+
+<div class="status">
+
+RESOURCE NOT FOUND
+
+</div>
+
+<div class="message">
+
+The requested resource could not be located within the
+Amethyst Corporations network.
+
+If you believe this document should exist,
+please contact your system administrator.
+
+</div>
+
+<div class="details" id="terminal">
+
+STATUS........FAILED
+
+NODE..........UNKNOWN
+
+RESPONSE......404
+
+ANGEL.........ONLINE
+
+</div>
+
+<a href="index.html" class="button">
+
+RETURN TO HOME
+
+</a>
+
+</div>
+
+<div class="corner">
+
+ANGEL PROTOCOL // ERROR
+
+</div>
+
+<script>
+
+const lines = [
+
+"STATUS........FAILED",
+"STATUS........SEARCHING",
+"STATUS........FAILED"
+
+];
+
+let i = 0;
+
+setInterval(()=>{
+
+document.getElementById("terminal").innerHTML=
+
+lines[i] +
+
+"\n\nNODE..........UNKNOWN\n\nRESPONSE......404\n\nANGEL.........ONLINE";
+
+i++;
+
+if(i>=lines.length) i=0;
+
+},3500);
+
+</script>
+
+<!--
+Nothing is ever truly deleted. 
+-->
+
+</body>
+
+</html>
